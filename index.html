@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 1. تعديل العنوان ليحتوي على الكلمة التي يكتبها الناس في بحث جوجل -->
+<title>معرفة استهلاك يمن نت | أداة تحليل البيانات الذكية</title>
+
+<!-- 2. إضافة وصف يظهر تحت الرابط في جوجل يشرح للباحث ماذا سيستفيد -->
+<meta name="description" content="أسهل طريقة لـ معرفة استهلاك يمن نت وتحليل بيانات الإنترنت الخاص بك. تفاصيل دقيقة حول الرصيد المتبقي واستهلاك الباقة اليومي والشهري باليمن.">
+
+<!-- 3. الكلمات الدلالية السريعة لروبوتات البحث -->
+<meta name="keywords" content="معرفة استهلاك يمن نت, استهلاك يمن نت, فحص رصيد يمن نت, تحليل يمن نت">
+
+<style>
+body{
+    font-family: system-ui, -apple-system, sans-serif;
+    direction: rtl;
+    margin:0;
+    background:#f4f7ff;
+    padding:10px;
+    color: #1e293b;
+}
+</style>
+</head>
+
+<style>
+body{
+    font-family: system-ui, -apple-system, sans-serif;
+    direction: rtl;
+    margin:0;
+    background:#f4f7ff;
+    padding:10px;
+    color: #1e293b;
+}
+
+.container{ max-width:1000px; margin:auto; background: #fff; padding: 15px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); position: relative; padding-bottom: 60px; }
+h3 { text-align:center; color: #1e3a8a; margin-top: 0; font-size: 18px; }
+h4 { color: #2563eb; margin-top: 25px; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; font-size: 15px; }
+h5 { color: #475569; margin: 15px 0 5px 0; font-size: 13px; }
+
+/* تنسيق الهيدر العلوي الجديد المتناسق مع لوجو الواجهة والطباعة */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+.main-header svg {
+    width: 28px;
+    height: 28px;
+    fill: #2563eb;
+}
+.main-header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+/* هيدر مخصص يظهر في الطباعة والـ PDF فقط */
+.print-only-header {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.print-only-header h2 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+}
+.print-period {
+    font-size: 13px;
+    color: #475569;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* تنسيق الحقوق الناعم وغير المزعج أسفل الشاشة الرئيسية */
+.site-footer {
+    text-align: center;
+    font-size: 11px;
+    color: #94a3b8;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-top: 1px dashed #e2e8f0;
+}
+
+textarea{
+    width:100%;
+    height:130px;
+    padding:12px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    font-size:13px;
+    box-sizing: border-box;
+    resize: vertical;
+    outline: none;
+    font-family: monospace;
+}
+
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+/* شبكة أزرار متوافقة مع الجوال */
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 11px 2px;
+    border: 0;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+button:hover {
+    background: #1d4ed8;
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -50%;
+    width: 30%; height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+}
+
+button:hover::after {
+    left: 150%;
+    transition: all 0.6s ease;
+}
+
+/* بطاقات الخلاصة المتوافقة مع الجوال */
+.summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card span {
+    display: block;
+    color: #2563eb;
+    font-size: 15px;
+    margin-top: 4px;
+}
+#printAccCard {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.print-acc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.print-acc-item {
+    text-align: center;
+    font-size: 11px;
+    color: #065f46;
+    font-weight: 500;
+}
+
+.print-acc-item span {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #047857;
+    margin-top: 2px;
+}
+
+/* نمط جديد مميز ومخصص لكرت الأرباح داخل التراكمي */
+.profit-item {
+    color: #92400e !important;
+}
+.profit-item span {
+    color: #b45309 !important;
+}
+
+.filter-box {
+    background: #f1f5f9;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.filter-box select, .filter-box input {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    font-size: 12px;
+}
+
+.filter-box select {
+    flex: 1;
+    min-width: 80px;
+}
+
+/* نمط خانات إدخال الأرباح الجديدة المتناسقة مع الواجهة */
+.profit-input {
+    width: 65px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.filter-btn {
+    width: auto;
+    padding: 6px 15px;
+    background: #475569;
+    flex: none;
+}
+
+.filter-btn:hover {
+    background: #334155;
+}
+
+/* الجداول */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    text-align: right;
+    min-width: 500px;
+}
+
+th, td {
+    padding: 8px 10px;
+    border: 1px solid #e2e8f0;
+}
+
+th {
+    background: #f8fafc;
+    color: #475569;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #fdfdfd;
+}
+
+.total-row {
+    background: #fee2e2 !important;
+    font-weight: bold;
+    color: #991b1b;
+}
+
+.col-down {
+    background-color: rgba(240, 253, 244, 0.8) !important;
+}
+
+.col-up {
+    background-color: rgba(239, 246, 255, 0.8) !important;
+}
+
+.col-total {
+    background-color: rgba(254, 243, 199, 0.8) !important;
+    font-weight: bold;
+}
+
+#displayName {
+    background: #eff6ff;
+    color: #1e40af;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: none;
+    border-right: 4px solid #2563eb;
+    font-size: 13px;
+}
+
+.accumulated-section {
+    display: none;
+}
+
+#currentFileSection {
+    display: none;
+}
+
+#pdfDynamicArea {
+    display: none;
+}
+
+.document-print-block {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 3px dashed #cbd5e1;
+    page-break-after: always;
+}
+
+.document-print-title {
+    font-weight: bold;
+    color: #b45309;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* شاشات كبيرة */
+@media(min-width: 600px) {
+    body { padding: 20px; }
+    .container { padding: 20px; }
+    .summary, .print-acc-grid { grid-template-columns: repeat(5, 1fr); }
+    table { font-size: 12px; }
+}
+
+/* إعدادات الطباعة والـ PDF الملونة والمحدثة بالكامل لشاشات السحب المالي */
+@media print {
+    body { 
+        background: white !important; 
+        padding: 0 !important; 
+        direction: rtl !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    .container { 
+        box-shadow: none !important; 
+        max-width: 100% !important; 
+        padding: 0 !important; 
+    }
+
+    textarea, .btn-grid, .filter-box, .summary, h4, #currentFileSection, .main-header, .site-footer {
+        display: none !important;
+    }
+
+    .print-only-header {
+        display: block !important;
+    }
+
+    #displayName, #printAccCard, .accumulated-section, #pdfDynamicArea, .table-wrapper, table {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .print-acc-grid { display: grid !important; grid-template-columns: repeat(5, 1fr) !important; }
+
+    .col-down { background-color: rgba(240, 253, 244, 0.8) !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    .col-up { background-color: rgba(239, 246, 255, 0.8) !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    .col-total { background-color: rgba(254, 243, 199, 0.8) !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    .total-row { background-color: #fee2e2 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+    table {
+        min-width: 100% !important;
+        display: table !important;
+        page-break-inside: auto;
+    }
+    
+    tr {
+        page-break-inside: avoid !important;
+        page-break-after: auto !important;
+    }
+
+    h5, .document-print-title {
+        color: #000 !important;
+        page-break-after: avoid !important;
+    }
+
+    /* طباعة الحقوق أسفل كل ورقة مطبوعة */
+    body::after {
+        content: "تم برمجة وإنشاء الموقع بواسطة المهندس / أيمن الآنسي";
+        position: fixed;
+        bottom: 5px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 10px;
+        color: #94a3b8 !important;
+        font-family: system-ui, sans-serif;
+        direction: rtl;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- واجهة الهيدر واللوجو في الصفحة الرئيسية للموقع -->
+<div class="main-header">
+    <svg viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+    </svg>
+    <h2>تقرير بيانات يمن نت</h2>
+</div>
+
+<!-- واجهة الهيدر الذكي المخصص لطباعة الـ PDF فقط -->
+<div class="print-only-header">
+    <h2>تقرير بيانات يمن نت</h2>
+    <div class="print-period" id="pdfPeriodText">الفترة: جميع الفترات المتاحة</div>
+</div>
+<div id="displayName"></div>
+<h1 style="font-size: 1.5rem; text-align: center; color: #1e293b; margin: 15px 0;">أداة معرفة استهلاك يمن نت وتحليل البيانات</h1>
+
+<div id="printAccCard">
+    <div style="text-align: center; font-weight: bold; color: #059669; font-size: 14px;">
+        📋 الرصيد التراكمي والمالي لجميع المستندات المضافة
+    </div>
+
+    <div class="print-acc-grid">
+        <div class="print-acc-item">إجمالي الاستقبال<span id="p_acc_down">0 GB</span></div>
+        <div class="print-acc-item">إجمالي الإرسال<span id="p_acc_up">0 GB</span></div>
+        <div class="print-acc-item">الإجمالي النهائي <span id="p_acc_sum">0 GB</span></div>
+        <div class="print-acc-item">إجمالي الوقت<span id="p_acc_time">00:00:00</span></div>
+        <div class="print-acc-item profit-item">إجمالي الأرباح<span id="p_acc_profit">0 ريال</span></div>
+    </div>
+</div>
+<textarea id="input" placeholder="الصق بيانات جلسات يمن نت هنا..."></textarea>
+
+<div class="btn-grid">
+    <button onclick="handleAction(false)">🔍 تحليل</button>
+    <button onclick="handleAction(true)">➕ إضافة</button>
+    <button onclick="clearAllData()">🧹 مسح</button>
+    <button onclick="saveAsPDF()">📄 PDF</button>
+</div>
+
+<div class="filter-box">
+    <label>من:</label>
+    <select id="startSelect"></select>
+
+    <label>إلى:</label>
+    <select id="endSelect"></select>
+
+    <label>الترتيب:</label>
+    <select id="sortSelect">
+        <option value="asc">من الأقدم للأحدث</option>
+        <option value="desc">من الأحدث للأقدم</option>
+    </select>
+
+    <label style="color:#121010d5; font-weight:bold; margin-right:5px;">سعر الـGB:</label>
+    <input type="number" id="priceInput" class="profit-input" value="" oninput="calculateLiveProfit()">
+
+    <label style="color:#000000; font-weight:bold;">العمله</label>
+    <input type="text" id="currencyInput" style="width:45px; text-align:center; font-weight:bold;" value="ريال" oninput="calculateLiveProfit()">
+
+    <button class="filter-btn" onclick="applyFilter()">عرض</button>
+</div>
+<div class="summary">
+    <div class="card">الاستقبال <span id="down">0 GB</span></div>
+    <div class="card">الإرسال <span id="up">0 GB</span></div>
+    <div class="card">الإجمالي الحالي <span id="total">0 GB</span></div>
+    <div class="card">الوقت <span id="time">00:00:00</span></div>
+</div>
+
+<div class="accumulated-section" id="accSection">
+    <h4>📋 جدول ملخص المستندات المضافة (التراكمي)</h4>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>المستند</th>
+                    <th>تحميل</th>
+                    <th>رفع</th>
+                    <th>الإجمالي الكلي</th>
+                    <th>وقت</th>
+                    <th>عدد الجلسات</th>
+                </tr>
+            </thead>
+
+            <tbody id="acc_tbody"></tbody>
+
+            <tfoot>
+                <tr class="total-row">
+                    <td>الإجمالي التراكمي</td>
+                    <td id="acc_total_down">0 GB</td>
+                    <td id="acc_total_up">0 GB</td>
+                    <td id="acc_total_sum">0 GB</td>
+                    <td id="acc_total_time">00:00:00</td>
+                    <td id="acc_total_count">0 جلسة</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<div id="currentFileSection">
+    <h4>التقرير اليومي للملف الحالي</h4>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>البداية</th>
+                    <th>النهاية</th>
+                    <th>تحميل</th>
+                    <th>رفع</th>
+                    <th>الإجمالي الكلي</th>
+                    <th>وقت</th>
+                    <th>الجلسات</th> <!-- العمود الجديد المضاف حسب طلبك -->
+                </tr>
+            </thead>
+            <tbody id="day_tbody"></tbody>
+            <tfoot id="day_tfoot"></tfoot>
+        </table>
+    </div>
+
+    <h4>جلسات الملف الحالي</h4>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>بدء</th>
+                    <th>انتهاء</th>
+                    <th>تحميل</th>
+                    <th>رفع</th>
+                    <th>الإجمالي الكلي</th>
+                    <th>وقت</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+            <tfoot id="tfoot"></tfoot>
+        </table>
+    </div>
+</div>
+
+<div id="pdfDynamicArea"></div>
+
+</div> <!-- نهاية container -->
+<!-- الحقوق المرئية والناعمة أسفل الشاشة الرئيسية للموقع -->
+<div class="site-footer">
+    تم برمجة وإنشاء الموقع بواسطة المهندس / أيمن الآنسي
+</div>
+
+<script>
+let currentSessions = []; 
+let pageCount = 0;
+let detectedCustomerName = "";
+let filteredSessions = [];
+
+let globalAccDown = 0; 
+let globalAccUp = 0;   
+let globalAccTime = 0;
+let globalAccCount = 0;
+
+function clean(t){
+    return (t||"").replace(/[\u200e\u200f\u202a\u202b\u202c]/g,'').trim();
+}
+
+function size(s){
+    if(!s) return 0;
+    s = clean(s).replace(/٫/g,'.').toUpperCase();
+    let v = parseFloat(s);
+    if(isNaN(v)) return 0;
+
+    if(s.includes("GB")) return Math.round(v * 1000 * 1000 * 1000);
+    if(s.includes("MB")) return Math.round(v * 1000 * 1000);
+    if(s.includes("KB")) return Math.round(v * 1000);
+    if(s.includes("B")) return Math.round(v);
+    return 0;
+}
+
+function formatSize(bytes) {
+    if (bytes === 0) return "0 GB";
+    let gb = bytes / (1000 * 1000 * 1000);
+    if (gb >= 1) return gb.toFixed(2) + " GB";
+    let mb = bytes / (1000 * 1000);
+    return mb.toFixed(2) + " MB";
+}
+
+function sec(t){
+    if(!t) return 0;
+    t=clean(t).replace(/٫/g,'.');
+    let v=parseFloat(t);
+    if(isNaN(v)) return 0;
+
+    if(t.includes("ساعة")) return v*3600;
+    if(t.includes("دقيقة")) return v*60;
+    return v;
+}
+
+function formatTime(s){
+    let h=Math.floor(s/3600);
+    let m=Math.floor((s%3600)/60);
+    let sec=Math.floor(s%60);
+    return `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
+}
+
+function extractDate(t){
+    let m=clean(t).match(/(\d{2})\/(\d{2})\/(\d{4})/);
+    return m ? m[1]+"/"+m[2]+"/"+m[3] : "غير معروف";
+}
+
+function parseDateForSort(d){
+    let p=clean(d).split(/\s+/);
+    if(p.length<3) return new Date(0);
+
+    let d2=p[0].split('/');
+    let t=p[1].split(':');
+    let am=p[2];
+
+    let h=parseInt(t[0]);
+
+    if(am?.includes("م") && h < 12) h += 12;
+    if(am?.includes("ص") && h === 12) h = 0;
+
+    return new Date(
+        parseInt(d2[2]),
+        parseInt(d2[1]) - 1,
+        parseInt(d2[0]),
+        h,
+        parseInt(t[1]),
+        parseInt(t[2]||0)
+    );
+}
+
+function calculateLiveProfit() {
+    let priceInput = document.getElementById("priceInput");
+    let currencyInput = document.getElementById("currencyInput");
+    let p_acc_profit = document.getElementById("p_acc_profit");
+    if (!priceInput || !currencyInput || !p_acc_profit) return;
+
+    let pricePerGb = parseFloat(priceInput.value) || 0;
+    let currencyStr = currencyInput.value || "ريال";
+
+    let totalGb = (globalAccDown + globalAccUp) / (1000 * 1000 * 1000);
+    let totalProfit = totalGb * pricePerGb;
+
+    p_acc_profit.innerText = totalProfit.toFixed(2) + " " + currencyStr;
+}
+async function handleAction(isAppendMode) {
+    let rawText = document.getElementById("input").value;
+    if (!rawText.trim()) return;
+
+    let lines = rawText.split("\n");
+    currentSessions = [];
+
+    const chunk = 200;
+
+    for (let i = 0; i < lines.length; i += chunk) {
+        let part = lines.slice(i, i + chunk);
+
+        for (let line of part) {
+            let cleanedLine = clean(line);
+            if (!cleanedLine) continue;
+
+            if (
+                cleanedLine.includes("وقت البدء") ||
+                cleanedLine.includes("وقت الانتهاء") ||
+                cleanedLine.includes("حجم الاستقبال") ||
+                cleanedLine.includes("حجم الارسال")
+            ) continue;
+
+            if (line.includes("مرحباً:")) {
+                detectedCustomerName = line.replace("مرحباً:", "").trim();
+            }
+
+            let p = cleanedLine.split(/\t| {2,}/);
+            if (p.length < 5) continue;
+
+            let sessionObj = {
+                startText: p[0],
+                endText: p[1],
+                downStr: p[2],
+                upStr: p[3],
+                timeSec: sec(p[4]),
+                downVal: size(p[2]),
+                upVal: size(p[3]),
+                dateKey: extractDate(p[0]),
+                startDateObj: parseDateForSort(p[0])
+            };
+
+            currentSessions.push(sessionObj);
+        }
+
+        await new Promise(r => setTimeout(r, 0));
+    }
+
+    if (currentSessions.length === 0) return;
+
+    currentSessions.sort((a, b) => a.startDateObj - b.startDateObj);
+
+    if (detectedCustomerName) {
+        let nameDiv = document.getElementById("displayName");
+        nameDiv.style.setProperty("display", "block", "important");
+        nameDiv.innerText = "👤 حساب المشترك: " + detectedCustomerName;
+    }
+
+    let currentSection = document.getElementById("currentFileSection");
+
+    if (isAppendMode) {
+        pageCount++;
+        document.getElementById("accSection").style.setProperty("display", "block", "important");
+        if (currentSection) currentSection.style.display = "none"; 
+
+        let usedData =
+            (filteredSessions && filteredSessions.length > 0)
+                ? filteredSessions
+                : currentSessions;
+
+        let pDown = 0, pUp = 0, pTime = 0;
+        let pCount = usedData.length;
+
+        for (let s of usedData) {
+            pDown += s.downVal;
+            pUp += s.upVal;
+            pTime += s.timeSec;
+        }
+
+        globalAccDown += pDown;
+        globalAccUp += pUp;
+        globalAccTime += pTime;
+        globalAccCount += pCount;
+
+        let rowHtml = `
+        <tr>
+            <td>مستند رقم (${pageCount})</td>
+            <td class="col-down">${formatSize(pDown)}</td>
+            <td class="col-up">${formatSize(pUp)}</td>
+            <td class="col-total">${formatSize(pDown + pUp)}</td>
+            <td>${formatTime(pTime)}</td>
+            <td>${pCount} جلسة</td>
+        </tr>`;
+
+        document.getElementById("acc_tbody").innerHTML += rowHtml;
+
+        let tempDaily = {};
+        let tempH1 = "", tempH2 = "";
+        let chronologicalData = [...usedData].sort((a, b) => a.startDateObj - b.startDateObj);
+
+        let totalDailyDown = 0, totalDailyUp = 0, totalDailyTime = 0;
+
+        for (let s of chronologicalData) {
+            if (!tempDaily[s.dateKey]) {
+                tempDaily[s.dateKey] = {
+                    f: s.startText,
+                    l: s.endText,
+                    d: 0,
+                    u: 0,
+                    t: 0,
+                    c: 0 // احتساب الجلسات التراكمية في الطباعة أيضاً
+                };
+            }
+
+            tempDaily[s.dateKey].l = s.endText;
+            tempDaily[s.dateKey].d += s.downVal;
+            tempDaily[s.dateKey].u += s.upVal;
+            tempDaily[s.dateKey].t += s.timeSec;
+            tempDaily[s.dateKey].c += 1;
+
+            totalDailyDown += s.downVal;
+            totalDailyUp += s.upVal;
+            totalDailyTime += s.timeSec;
+        }
+
+        for (let s of usedData) {
+            let sessionTotal = s.downVal + s.upVal;
+
+            tempH1 += `
+            <tr>
+                <td>${s.startText}</td>
+                <td>${s.endText}</td>
+                <td class="col-down">${s.downStr}</td>
+                <td class="col-up">${s.upStr}</td>
+                <td class="col-total">${formatSize(sessionTotal)}</td>
+                <td>${formatTime(s.timeSec)}</td>
+            </tr>`;
+        }
+
+        let sortSelectElement = document.getElementById("sortSelect");
+        let dailyKeys = Object.keys(tempDaily);
+        if (sortSelectElement && sortSelectElement.value === "desc") dailyKeys.reverse();
+
+        for (let k of dailyKeys) {
+            let x = tempDaily[k];
+            let dayTotal = x.d + x.u;
+
+            tempH2 += `
+            <tr>
+                <td>${x.f}</td>
+                <td>${x.l}</td>
+                <td class="col-down">${formatSize(x.d)}</td>
+                <td class="col-up">${formatSize(x.u)}</td>
+                <td class="col-total">${formatSize(dayTotal)}</td>
+                <td>${formatTime(x.t)}</td>
+                <td>${x.c}</td> <!-- تفعيل عمود الجلسات في تكرار التقرير اليومي المطبوع للمستند -->
+            </tr>`;
+        }
+
+        let blockHtml = `
+        <div class="document-print-block">
+            <div class="document-print-title">
+                📋 تفاصيل مستند رقم (${pageCount})
+            </div>
+
+            <h5>التقرير اليومي للمستند (${pageCount})</h5>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>البداية</th>
+                            <th>النهاية</th>
+                            <th>تحميل</th>
+                            <th>رفع</th>
+                            <th>الإجمالي الكلي</th>
+                            <th>وقت</th>
+                            <th>الجلسات</th> <!-- إضافته هنا للطباعة الملحقة -->
+                        </tr>
+                    </thead>
+                    <tbody>${tempH2}</tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="2">الناتج الكلي للمستند</td>
+                            <td>${formatSize(totalDailyDown)}</td>
+                            <td>${formatSize(totalDailyUp)}</td>
+                            <td>${formatSize(totalDailyDown + totalDailyUp)}</td>
+                            <td>${formatTime(totalDailyTime)}</td>
+                            <td>${pCount}</td> <!-- إجمالي الجلسات للمستند المطبوع -->
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <h5>جلسات المستند (${pageCount})</h5>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>بدء</th>
+                            <th>انتهاء</th>
+                            <th>تحميل</th>
+                            <th>رفع</th>
+                            <th>الإجمالي الكلي</th>
+                            <th>وقت</th>
+                        </tr>
+                    </thead>
+                    <tbody>${tempH1}</tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="2">إجمالي الجلسات</td>
+                            <td>${formatSize(totalDailyDown)}</td>
+                            <td>${formatSize(totalDailyUp)}</td>
+                            <td>${formatSize(totalDailyDown + totalDailyUp)}</td>
+                            <td>${formatTime(totalDailyTime)}</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>`;
+
+        document.getElementById("pdfDynamicArea").innerHTML += blockHtml;
+
+        document.getElementById("acc_total_down").innerText = formatSize(globalAccDown);
+        document.getElementById("acc_total_up").innerText = formatSize(globalAccUp);
+        document.getElementById("acc_total_sum").innerText = formatSize(globalAccDown + globalAccUp);
+        document.getElementById("acc_total_time").innerText = formatTime(globalAccTime);
+        document.getElementById("acc_total_count").innerText = globalAccCount + " جلسة";
+
+        document.getElementById("p_acc_down").innerText = formatSize(globalAccDown);
+        document.getElementById("p_acc_up").innerText = formatSize(globalAccUp);
+        document.getElementById("p_acc_sum").innerText = formatSize(globalAccDown + globalAccUp);
+        document.getElementById("p_acc_time").innerText = formatTime(globalAccTime);
+
+        calculateLiveProfit();
+
+        document.getElementById("input").value = "";
+        document.getElementById("tbody").innerHTML = "";
+        document.getElementById("day_tbody").innerHTML = "";
+        document.getElementById("tfoot").innerHTML = "";
+        document.getElementById("day_tfoot").innerHTML = "";
+
+        currentSessions = [];
+        filteredSessions = [];
+
+        document.getElementById("down").innerText = "0 GB";
+        document.getElementById("up").innerText = "0 GB";
+        document.getElementById("time").innerText = "00:00:00";
+        document.getElementById("total").innerText = "0 GB";
+
+        document.getElementById("startSelect").innerHTML = "";
+        document.getElementById("endSelect").innerHTML = "";
+    } else {
+        if (currentSection) currentSection.style.display = "block"; 
+        updateFilter();
+        render(currentSessions);
+    }
+}
+
+function updateFilter() {
+    let startSelect = document.getElementById("startSelect");
+    let endSelect = document.getElementById("endSelect");
+    if (!startSelect || !endSelect) return;
+
+    let sorted = [...currentSessions].sort((a, b) => a.startDateObj - b.startDateObj);
+    let dates = [...new Set(sorted.map(s => s.dateKey))];
+
+    let opt = '<option></option>';
+    dates.forEach(d => opt += `<option>${d}</option>`);
+
+    startSelect.innerHTML = opt;
+    endSelect.innerHTML = opt;
+}
+
+function applyFilter() {
+    let startSelect = document.getElementById("startSelect");
+    let endSelect = document.getElementById("endSelect");
+    let sortSelect = document.getElementById("sortSelect");
+    if (!startSelect || !endSelect || !sortSelect) return;
+
+    let s = startSelect.value;
+    let e = endSelect.value;
+    let sortOrder = sortSelect.value;
+
+    // تحديث نص الفترة في هيدر الطباعة فوراً عند الضغط على زر تطبيق
+    let periodDiv = document.getElementById("pdfPeriodText");
+    if(periodDiv) {
+        if(s && e) {
+            periodDiv.innerText = "الفترة من: " + s + " إلى: " + e;
+        } else if(s) {
+            periodDiv.innerText = "الفترة من: " + s + " إلى: نهاية البيانات المتاحة";
+        } else if(e) {
+            periodDiv.innerText = "الفترة من: بداية البيانات المتاحة إلى: " + e;
+        } else {
+            periodDiv.innerText = "الفترة: جميع الفترات المتاحة";
+        }
+    }
+
+    let f = [...currentSessions];
+
+    if (s) {
+        let p = s.split('/');
+        let d = new Date(parseInt(p[2]), parseInt(p[1]) - 1, parseInt(p[0]));
+        f = f.filter(x => x.startDateObj >= d);
+    }
+
+    if (e) {
+        let p = e.split('/');
+        let d = new Date(parseInt(p[2]), parseInt(p[1]) - 1, parseInt(p[0]), 23, 59, 59);
+        f = f.filter(x => x.startDateObj <= d);
+    }
+
+    if (sortOrder === "desc") {
+        f.sort((a, b) => b.startDateObj - a.startDateObj);
+    } else {
+        f.sort((a, b) => a.startDateObj - b.startDateObj);
+    }
+
+    filteredSessions = f;
+    render(f);
+}
+
+function render(data) {
+    let tbody = document.getElementById("tbody");
+    let day_tbody = document.getElementById("day_tbody");
+    let down = document.getElementById("down");
+    let up = document.getElementById("up");
+    let total = document.getElementById("total");
+    let time = document.getElementById("time");
+    let sortSelect = document.getElementById("sortSelect");
+    
+    if (!tbody || !day_tbody || !down || !up || !total || !time) return;
+
+    let h1 = "", h2 = "";
+    let daily = {};
+    let dCurr = 0, uCurr = 0, tCurr = 0;
+    let totalSessionsCount = data.length;
+
+    let chronologicalData = [...data].sort((a, b) => a.startDateObj - b.startDateObj);
+
+    for (let s of chronologicalData) {
+        if (!daily[s.dateKey]) {
+            daily[s.dateKey] = {
+                f: s.startText,
+                l: s.endText,
+                d: 0,
+                u: 0,
+                t: 0,
+                c: 0
+            };
+        }
+
+        daily[s.dateKey].l = s.endText;
+        daily[s.dateKey].d += s.downVal;
+        daily[s.dateKey].u += s.upVal;
+        daily[s.dateKey].t += s.timeSec;
+        daily[s.dateKey].c += 1;
+    }
+
+    for (let s of data) {
+        dCurr += s.downVal;
+        uCurr += s.upVal;
+        tCurr += s.timeSec;
+
+        let sessionTotal = s.downVal + s.upVal;
+
+        h1 += `
+        <tr>
+            <td>${s.startText}</td>
+            <td>${s.endText}</td>
+            <td class="col-down">${s.downStr}</td>
+            <td class="col-up">${s.upStr}</td>
+            <td class="col-total">${formatSize(sessionTotal)}</td>
+            <td>${formatTime(s.timeSec)}</td>
+        </tr>`;
+    }
+
+    tbody.innerHTML = h1;
+
+    down.innerText = formatSize(dCurr);
+    up.innerText = formatSize(uCurr);
+    total.innerText = formatSize(dCurr + uCurr);
+    time.innerText = formatTime(tCurr);
+
+    let dailyKeys = Object.keys(daily);
+    if (sortSelect && sortSelect.value === "desc") dailyKeys.reverse();
+
+    for (let k of dailyKeys) {
+        let x = daily[k];
+        let dayTotal = x.d + x.u;
+
+        h2 += `
+        <tr>
+            <td>${x.f}</td>
+            <td>${x.l}</td>
+            <td class="col-down">${formatSize(x.d)}</td>
+            <td class="col-up">${formatSize(x.u)}</td>
+            <td class="col-total">${formatSize(dayTotal)}</td>
+            <td>${formatTime(x.t)}</td>
+            <td>${x.c}</td>
+        </tr>`;
+    }
+
+    day_tbody.innerHTML = h2;
+
+    let footerHtmlDaily = `
+    <tr class="total-row">
+        <td colspan="2">الإجمالي الكلي للجدول اليومي</td>
+        <td>${formatSize(dCurr)}</td>
+        <td>${formatSize(uCurr)}</td>
+        <td>${formatSize(dCurr + uCurr)}</td>
+        <td>${formatTime(tCurr)}</td>
+        <td>${totalSessionsCount}</td>
+    </tr>`;
+
+    let footerHtmlSessions = `
+    <tr class="total-row">
+        <td colspan="2">الإجمالي الكلي للجلسات</td>
+        <td>${formatSize(dCurr)}</td>
+        <td>${formatSize(uCurr)}</td>
+        <td>${formatSize(dCurr + uCurr)}</td>
+        <td>${formatTime(tCurr)}</td>
+    </tr>`;
+
+    document.getElementById("day_tfoot").innerHTML = footerHtmlDaily;
+    document.getElementById("tfoot").innerHTML = footerHtmlSessions;
+}
+
+function clearAllData() {
+    document.getElementById("input").value = "";
+    document.getElementById("acc_tbody").innerHTML = "";
+    document.getElementById("pdfDynamicArea").innerHTML = "";
+
+    currentSessions = [];
+    pageCount = 0;
+
+    globalAccDown = 0;
+    globalAccUp = 0;
+    globalAccTime = 0;
+    globalAccCount = 0;
+
+    document.getElementById("acc_total_down").innerText = "0 GB";
+    document.getElementById("acc_total_up").innerText = "0 GB";
+    document.getElementById("acc_total_sum").innerText = "0 GB";
+    document.getElementById("acc_total_time").innerText = "00:00:00";
+    document.getElementById("acc_total_count").innerText = "0 جلسة";
+
+    document.getElementById("p_acc_down").innerText = "0 GB";
+    document.getElementById("p_acc_up").innerText = "0 GB";
+    document.getElementById("p_acc_time").innerText = "00:00:00";
+    document.getElementById("p_acc_sum").innerText = "0 GB";
+    document.getElementById("p_acc_profit").innerText = "0 ريال";
+
+    document.getElementById("down").innerText = "0 GB";
+    document.getElementById("up").innerText = "0 GB";
+    document.getElementById("time").innerText = "00:00:00";
+    document.getElementById("total").innerText = "0 GB";
+
+    document.getElementById("tbody").innerHTML = "";
+    document.getElementById("day_tbody").innerHTML = "";
+    document.getElementById("tfoot").innerHTML = "";
+    document.getElementById("day_tfoot").innerHTML = "";
+
+    document.getElementById("startSelect").innerHTML = "";
+    document.getElementById("endSelect").innerHTML = "";
+
+    document.getElementById("priceInput").value = "";
+    document.getElementById("currencyInput").value = "ريال";
+
+    let currentSection = document.getElementById("currentFileSection");
+    if (currentSection) currentSection.style.display = "none";
+
+    let accSection = document.getElementById("accSection");
+    if (accSection) accSection.style.display = "none";
+
+    document.getElementById("displayName").style.setProperty("display", "none");
+    document.getElementById("pdfPeriodText").innerText = "الفترة: جميع الفترات المتاحة";
+}
+
+function saveAsPDF(){
+    window.print();
+}
+</script>
+
+</body>
+</html>
+    
